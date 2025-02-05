@@ -67,19 +67,29 @@ export default function LocationForm({ obj = initialState }) {
         </Form.Group>
 
         {/* LOCATION ADDRESS INPUT */}
-        <Form.Label>Location Address</Form.Label>
-        <Autocomplete
-          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
-          onPlaceSelected={(place) =>
-            setFormInput((prevState) => ({
-              ...prevState,
-              address: place.formatted_address,
-            }))
-          }
-          options={{ types: ['address'] }}
-          className="form-control"
-          placeholder="Enter address"
-        />
+        <Form.Group>
+          <Form.Label>Location Address</Form.Label>
+          <Autocomplete
+            apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+            onPlaceSelected={(place) =>
+              setFormInput((prevState) => ({
+                ...prevState,
+                address: place.formatted_address,
+              }))
+            }
+            options={{ types: ['address'] }}
+            className="form-control"
+            placeholder="Enter address"
+            value={formInput.address}
+            onChange={(e) =>
+              setFormInput((prevState) => ({
+                ...prevState,
+                address: e.target.value,
+              }))
+            }
+            name="address"
+          />
+        </Form.Group>
 
         {/* SUBMIT BUTTON */}
         <div className="text-center">
