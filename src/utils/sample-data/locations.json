@@ -98,5 +98,25 @@
           "longitude": -86.7026
       },
       "uid": "SH4SWAjPr5Uzp4Cao5NGJwcuGMM2"
-  }
+  },
+  {
+    "id": 10,
+    "name": "Grand Ole Opry",
+    "address": "600 Opry Mills Dr, Nashville, TN 37214, USA",
+    "coordinates": [
+        36.2066575,
+        -86.6926723
+    ],
+    "uid": "SH4SWAjPr5Uzp4Cao5NGJwcuGMM2"
+},
+{
+    "id": 11,
+    "name": "Ryman Auditorium",
+    "address": "116 5th Ave N, Nashville, TN 37219, USA",
+    "coordinates": [
+        36.1611859,
+        -86.77856539999999
+    ],
+    "uid": "SH4SWAjPr5Uzp4Cao5NGJwcuGMM2"
+}
 ]
